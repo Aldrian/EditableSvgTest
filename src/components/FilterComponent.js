@@ -52,7 +52,7 @@ class FilterComponent extends React.Component {
         </svg>
 
         <section className="filtered">
-          <h2  style={textStyle} contentEditable="true">Petrol</h2>
+          <h2  style={textStyle}>Petrol</h2>
         </section>
       </div>
     );
