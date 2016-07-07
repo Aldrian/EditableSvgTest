@@ -70,6 +70,7 @@
     "react-color": "^2.2.0",
     "react-dom": "^15.0.0",
     "react-redux": "^4.4.5",
-    "redux": "^3.5.2"
+    "redux": "^3.5.2",
+    "skeleton-scss": "^2.0.4"
   }
 }
