@@ -7,19 +7,26 @@ require('styles//Filter.scss');
 class FilterComponent extends React.Component {
   render() {
     const {settings} = this.props;
+    const textStyle = {
+      color: settings.textColor,
+      fill: settings.textColor,
+      fontSize: `${settings.fontSize}px`,
+      transform: `rotate(${settings.textRotation}deg)`,
+      WebkitTransform: `rotate(${settings.textRotation}deg)`
+    }
     return (
       <div className="filter-component">
         <svg version="1.1" id="Ebene_1" width="100%" height="100%">
 
           <defs>
             <filter id="filter">
-              <feFlood floodColor="#582D1B" result="COLOR-red"/>
-              <feTurbulence baseFrequency=".05,.004" type="fractalNoise" numOctaves="4" seed="0" result="FRACTAL-TEXTURE_10"/>
-              <feColorMatrix type="matrix" values="0 0 0 0 0,
+              <feFlood floodColor={settings.extrusionColor} result="COLOR-red"/>
+              <feTurbulence baseFrequency={`${settings.textureVerticalFrequency},${settings.textureHorizontalFrequency}`} type="fractalNoise" numOctaves="4" seed="0" result="FRACTAL-TEXTURE_10"/>
+              <feColorMatrix type="matrix" values={`0 0 0 0 0,
           0 0 0 0 0,
           0 0 0 0 0,
-          0 0 0 -1.2 1.1" in="FRACTAL-TEXTURE_10" result="FRACTAL-TEXTURE_20"/>
-              <feMorphology operator="dilate" radius="4" in="SourceAlpha" result="STROKE_10"/>
+          0 0 0 -1.1 ${settings.textureIntensity}`} in="FRACTAL-TEXTURE_10" result="FRACTAL-TEXTURE_20"/>
+        <feMorphology operator="dilate" radius={settings.strokeWidth} in="SourceAlpha" result="STROKE_10"/>
               <feOffset in="STROKE_10" result="BEVEL_10"/>
               <feConvolveMatrix order="9,9" divisor="1" kernelMatrix="1 0 0 0 0 0 0 0 0
           0 1 0 0 0 0 0 0 0
@@ -45,7 +52,7 @@ class FilterComponent extends React.Component {
         </svg>
 
         <section className="filtered">
-          <h2>Petrol</h2>
+          <h2  style={textStyle} contentEditable="true">Petrol</h2>
         </section>
       </div>
     );
