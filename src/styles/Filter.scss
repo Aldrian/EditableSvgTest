@@ -1,0 +1,38 @@
+.filter-component {
+  margin-top: 25vh;
+  @import url( 'http://fonts.googleapis.com/css?family=Racing+Sans+One');
+
+  ::selection {
+    background: #582D1B;
+  }
+  ::-moz-selection {
+    background: #582D1B;
+  }
+  svg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+  }
+  .filtered {
+    position: relative;
+    filter: url(#filter);
+    -webkit-filter: url(#filter);
+    margin: 0 auto;
+    padding: 2em 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  h2 {
+    position: relative;
+    -webkit-transform: rotate(-12deg);
+    transform: rotate(-12deg);
+    font: 140px/1 'Racing Sans One', cursive;
+    color: #2B3F0E;
+    fill: #2B3F0E;
+    margin: 0 auto;
+    text-align: center;
+  }
+}

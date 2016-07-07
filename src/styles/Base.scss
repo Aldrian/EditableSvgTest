@@ -1,0 +1,26 @@
+html {
+  height: 100%;
+}
+body {
+  background-color: silver;
+  height: 100%;
+  background-size: cover;
+  background-attachment: fixed;
+  padding: 0;
+  margin: 0;
+}
+@media screen and (max-width: 1281px) {
+  body {
+    background-image: url('https://dl.dropboxusercontent.com/u/974449/patterns/concrete_m.jpg');
+  }
+}
+@media screen and (max-width: 760px) {
+  body {
+    background-image: url('https://dl.dropboxusercontent.com/u/974449/patterns/concrete_s.jpg');
+  }
+}
+@media screen and (min-width: 1281px), screen and (-webkit-min-device-pixel-ratio: 2), screen and ( min--moz-device-pixel-ratio: 2), screen and ( min-device-pixel-ratio: 2), screen and ( min-resolution: 192dpi), screen and ( min-resolution: 2dppx) {
+  body {
+    background-image: url('https://dl.dropboxusercontent.com/u/974449/patterns/concrete_l.jpg');
+  }
+}
