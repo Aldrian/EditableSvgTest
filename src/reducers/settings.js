@@ -30,7 +30,7 @@ module.exports = function(state = initialState, action) {
 
     case 'CHANGE_EXTRUSION_Y': {
       return Object.assign({}, state, {
-        extrusionX:  action.parameter
+        extrusionY:  action.parameter
       });
     }
 
