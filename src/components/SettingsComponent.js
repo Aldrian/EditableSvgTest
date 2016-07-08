@@ -30,7 +30,7 @@ class SettingsComponent extends React.Component {
               <label htmlFor="extrusionx">Extrusion X</label>
               <input type="range" name="extrusionx" min="0" max="10" step="1" defaultValue={settings.extrusionX} onChange={(event) => actions.changeExtrusionX(event.target.value)}/>
               <label htmlFor="extrusionY">Extrusion Y</label>
-              <input type="range" name="extrusiony" min="0" max="10" step="1" defaultValue={settings.extrusionX} onChange={(event) => actions.changeExtrusionY(event.target.value)}/>
+              <input type="range" name="extrusiony" min="0" max="10" step="1" defaultValue={settings.extrusionY} onChange={(event) => actions.changeExtrusionY(event.target.value)}/>
             </div>
           </div>
         </div>
